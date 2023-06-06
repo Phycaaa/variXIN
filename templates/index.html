@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>换装小游戏</title>
+</head>
+<body>
+    <h1>欢迎来到换装小游戏</h1>
+    <form action="/change" method="post">
+        <h2>请选择您的衣服</h2>
+        <select name="shirt">
+            <option value="red">红色</option>
+            <option value="blue">蓝色</option>
+            <option value="green">绿色</option>
+        </select>
+        <h2>请选择您的裤子</h2>
+        <select name="pants">
+            <option value="black">黑色</option>
+            <option value="gray">灰色</option>
+            <option value="brown">棕色</option>
+        </select>
+        <h2>请选择您的鞋子</h2>
+        <select name="shoes">
+            <option value="white">白色</option>
+            <option value="black">黑色</option>
+            <option value="brown">棕色</option>
+        </select>
+        <br><br>
+        <input type="submit" value="提交">
+    </form>
+    {% if shirt %}
+    <h2>您选择的衣服是{{ shirt }}</h2>
+    {% endif %}
+    {% if pants %}
+    <h2>您选择的裤子是{{ pants }}</h2>
+    {% endif %}
+    {% if shoes %}
+    <h2>您选择的鞋子是{{ shoes }}</h2>
+    {% endif %}
+</body>
+</html>
